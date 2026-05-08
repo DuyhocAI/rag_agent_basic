@@ -1,0 +1,8 @@
+{
+  "issued_at": "2026-04-30T21:07:08.146025",
+  "verified_complete": true,
+  "forced_by": "force_done_if_valid.py",
+  "reason": "requirements.tft tồn tại và có đủ requests, numpy, pandas",
+  "target_file": "C:\\Bao_Duy\\rag_agent\\requirements.tft",
+  "content": "requests\nnumpy\npandas\n"
+}

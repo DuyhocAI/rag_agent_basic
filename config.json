@@ -1,0 +1,24 @@
+{
+  "_comment": "RAG Agent config — server copy uses host 0.0.0.0, client copy uses public IP",
+  "_available_models": ["claude-opus-4-6", "claude-sonnet-4-6", "gpt-5.5", "gpt-5.4"],
+  "_available_supervisor_models": ["gpt-5.5", "gpt-5.4", "claude-opus-4-6", "claude-sonnet-4-6"],
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "api_key": "",
+  "ckey_api_key": "sk-93bfdf1cb100ed0379a5d5724f83af7621462aafd9037c7a318c01a180e2f860",
+  "model": "claude-opus-4-6",
+  "supervisor_model": "gpt-5.5",
+  "max_supervisor_rounds": 15,
+  "max_tokens": 100000,
+  "performance_threshold": 0.8,
+  "max_iterations": 5,
+  "stm_window": 20,
+  "stm_consolidate_every": 10,
+  "_local_only": {
+    "_note": "Fields below are only needed when running server.py locally",
+    "openai_api_key": "",
+    "openai_base_url": "https://ckey.vn/v1"
+  }
+}

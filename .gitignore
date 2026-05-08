@@ -1,0 +1,50 @@
+# Python                                                                                                         
+__pycache__/                                                                                                     
+*.py[cod]                                                                                                        
+*.pyo                                                                                                            
+*.pyd                                                                                                            
+.pytest_cache/                                                                                                   
+.mypy_cache/                                                                                                     
+.ruff_cache/                                                                                                     
+                                                                                                                
+# Virtual environments                                                                                           
+.venv/                                                                                                           
+venv/                                                                                                            
+env/                                                                                                             
+                                                                                                                
+# Logs                                                                                                           
+logs/                                                                                                            
+*.log                                                                                                            
+                                                                                                                
+# Backups                                                                                                        
+backup/                                                                                                          
+*.bak                                                                                                            
+*.backup                                                                                                         
+                                                                                                                
+# Local configs / secrets                                                                                        
+.env                                                                                                             
+.env.*                                                                                                           
+*.key                                                                                                            
+*.pem                                                                                                            
+*.secret                                                                                                         
+                                                                                                                
+# IDE                                                                                                            
+.vscode/                                                                                                         
+.idea/                                                                                                           
+                                                                                                                
+# OS                                                                                                             
+Thumbs.db                                                                                                        
+.DS_Store                                                                                                        
+                                                                                                                
+# Large/local model files                                                                                        
+models_store/                                                                                                    
+*.bin                                                                                                            
+*.pt                                                                                                             
+*.pth                                                                                                            
+*.onnx                                                                                                           
+*.safetensors                                                                                                    
+                                                                                                                
+# Temporary files                                                                                                
+tmp/                                                                                                             
+temp/                                                                                                            
+                        

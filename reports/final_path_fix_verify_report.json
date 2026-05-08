@@ -1,0 +1,63 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "restored_cli_server": [],
+  "patched_files": [
+    "agent_runtime_script.py",
+    "agent_diagnostics\\agent_runtime_script.py"
+  ],
+  "created_wrappers": [],
+  "layout": {
+    "cli.py": true,
+    "server.py": true,
+    "agent_core": true,
+    "agent_runtime": true,
+    "agent_runners": true,
+    "agent_diagnostics": true,
+    "agent_tests": true,
+    "agent_server": true,
+    "logs": true,
+    "reports": true,
+    "backup": true,
+    "memory": true
+  },
+  "wrappers": {
+    "agent.py": {
+      "wrapper_exists": false,
+      "target": "agent_runners/agent.py",
+      "target_exists": false
+    },
+    "run_agent_task.py": {
+      "wrapper_exists": false,
+      "target": "agent_runners/run_agent_task.py",
+      "target_exists": false
+    },
+    "continue_agent.py": {
+      "wrapper_exists": false,
+      "target": "agent_runners/continue_agent.py",
+      "target_exists": false
+    },
+    "status.py": {
+      "wrapper_exists": false,
+      "target": "agent_diagnostics/status.py",
+      "target_exists": false
+    },
+    "cli_supervised.py": {
+      "wrapper_exists": false,
+      "target": "agent_runners/cli_supervised.py",
+      "target_exists": false
+    }
+  },
+  "failed_compile": {
+    "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "old_imports": [],
+  "duplicate_paths": [],
+  "old_script_paths": [],
+  "ok": false
+}

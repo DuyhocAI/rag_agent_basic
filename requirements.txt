@@ -1,0 +1,51 @@
+# Core API/server
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# HTTP / networking
+requests
+httpx
+aiohttp
+websockets
+
+# LLM providers / local models
+openai
+ollama
+
+# RAG / vector search / embeddings
+numpy
+scikit-learn
+sentence-transformers
+faiss-cpu
+chromadb
+
+# Document processing
+pypdf
+PyPDF2
+python-docx
+beautifulsoup4
+lxml
+markdown
+
+# Database / storage
+sqlalchemy
+
+# Dashboard / UI
+streamlit
+gradio
+
+# Config / environment
+python-dotenv
+pyyaml
+
+# Utilities
+tqdm
+rich
+colorama
+loguru
+
+# Testing
+pytest
+pytest-asyncio

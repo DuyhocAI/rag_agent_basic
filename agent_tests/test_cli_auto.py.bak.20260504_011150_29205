@@ -1,0 +1,70 @@
+# ===== AGENT PROJECT ROOT BOOTSTRAP =====
+from pathlib import Path as _AgentPath
+import sys as _AgentSys
+_AGENT_PROJECT_ROOT = _AgentPath(__file__).resolve().parent
+if str(_AGENT_PROJECT_ROOT) not in _AgentSys.path:
+    _AgentSys.path.insert(0, str(_AGENT_PROJECT_ROOT))
+# ===== END AGENT PROJECT ROOT BOOTSTRAP =====
+
+# -*- coding: utf-8 -*-
+import socket
+import time
+import sys
+import fix_encoding  # Fix encoding
+
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+# Cau hinh
+HOST = '127.0.0.1'
+PORT = 5555
+
+# 5 tin nhan test
+messages = [
+    "Xin chao, day la tin nhan test 1",
+    "Test tin nhan thu 2",
+    "Day la tin nhan thu 3",
+    "Tin nhan test so 4",
+    "Tin nhan cuoi cung - test 5"
+]
+
+print("="*60)
+print("TEST CLI.PY TU DONG - 5 TIN NHAN")
+print("="*60)
+
+try:
+    # Ket noi den server
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect((HOST, PORT))
+    print(f"\n[OK] Da ket noi den server {HOST}:{PORT}")
+    
+    # Gui 5 tin nhan
+    for i, msg in enumerate(messages, 1):
+        print(f"\n[{i}/5] Gui: {msg}")
+        client_socket.send(msg.encode('utf-8'))
+        time.sleep(1)  # Cho 1 giay giua cac tin nhan
+    
+    print("\n[OK] Da gui xong 5 tin nhan")
+    
+    # Cho 2 giay de nhan phan hoi (neu co client khac)
+    print("\nCho 2 giay de nhan phan hoi...")
+    time.sleep(2)
+    
+    # Dong ket noi
+    client_socket.close()
+    print("\n[OK] Da dong ket noi")
+    
+except ConnectionRefusedError:
+    print(f"\n[LOI] Khong the ket noi den server {HOST}:{PORT}")
+    print("[LOI] Hay chac chan server dang chay!")
+    
+except Exception as e:
+    print(f"\n[LOI] {e}")
+    import traceback
+    traceback.print_exc()
+
+print("\n" + "="*60)
+print("HOAN THANH TEST")
+print("="*60)

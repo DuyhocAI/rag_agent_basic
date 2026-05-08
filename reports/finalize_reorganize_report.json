@@ -1,0 +1,207 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "restored_cli_server": [],
+  "patched_files": [
+    "agent_done_certificate.py",
+    "agent_runtime_script.py",
+    "agent_server_manager.py",
+    "agent_stop_signal.py",
+    "agent_watchdog.py",
+    "auto_test_cli.py",
+    "chat_server.py",
+    "cli.py",
+    "cli_backup.py",
+    "cli_backup_encoding.py",
+    "cli_backup_qa.py",
+    "cli_need_next_action.py",
+    "fix_encoding.py",
+    "hello_world.py",
+    "logging_config.py",
+    "migrate_memory.py",
+    "run_supervised_task.py",
+    "server.py",
+    "server_backup_before_fix.py",
+    "server_backup_final2.py",
+    "server_backup_import.py",
+    "server_backup_qa.py",
+    "server_memory_patch.py",
+    "test.py",
+    "test_cli_auto.py",
+    "verify_project_layout.py",
+    "__init__.py",
+    "agent_core\\project_paths.py",
+    "agent_core\\__init__.py",
+    "agent_diagnostics\\__init__.py",
+    "agent_runners\\__init__.py",
+    "agent_runtime\\__init__.py",
+    "agent_server\\__init__.py",
+    "agent_tests\\__init__.py",
+    "core\\agent.py",
+    "core\\agent_backup_import.py",
+    "core\\__init__.py",
+    "dashboard\\__init__.py",
+    "memory\\memory_manager.py",
+    "rag\\store.py",
+    "rag\\__init__.py",
+    "tests\\__init__.py",
+    "tools\\bug_fixer.py",
+    "tools\\code_gen.py",
+    "tools\\evaluator.py",
+    "tools\\model_improver.py",
+    "tools\\python_executor.py",
+    "tools\\test_runner.py",
+    "tools\\visualizer.py",
+    "tools\\__init__.py"
+  ],
+  "created_wrappers": [],
+  "moved_remaining_files": [
+    {
+      "from": "agent_done_certificate.py",
+      "to": "agent_diagnostics\\agent_done_certificate.py"
+    },
+    {
+      "from": "agent_memory.db",
+      "to": "backup\\duplicates\\agent_memory.db"
+    },
+    {
+      "from": "agent_memory.json",
+      "to": "reports\\agent_memory.json"
+    },
+    {
+      "from": "agent_runtime_script.py",
+      "to": "agent_diagnostics\\agent_runtime_script.py"
+    },
+    {
+      "from": "agent_server_manager.py",
+      "to": "agent_diagnostics\\agent_server_manager.py"
+    },
+    {
+      "from": "agent_stop_signal.py",
+      "to": "agent_diagnostics\\agent_stop_signal.py"
+    },
+    {
+      "from": "agent_watchdog.py",
+      "to": "agent_diagnostics\\agent_watchdog.py"
+    },
+    {
+      "from": "auto_test_cli.py",
+      "to": "agent_diagnostics\\auto_test_cli.py"
+    },
+    {
+      "from": "BAO_CAO_HOAN_THANH.md",
+      "to": "reports\\BAO_CAO_HOAN_THANH.md"
+    },
+    {
+      "from": "bug.txt",
+      "to": "backup\\duplicates\\bug.txt"
+    },
+    {
+      "from": "chat_server.py",
+      "to": "agent_diagnostics\\chat_server.py"
+    },
+    {
+      "from": "cli.log",
+      "to": "logs\\cli.log"
+    },
+    {
+      "from": "cli_backup.py",
+      "to": "agent_diagnostics\\cli_backup.py"
+    },
+    {
+      "from": "cli_backup_encoding.py",
+      "to": "agent_diagnostics\\cli_backup_encoding.py"
+    },
+    {
+      "from": "cli_backup_qa.py",
+      "to": "agent_diagnostics\\cli_backup_qa.py"
+    },
+    {
+      "from": "cli_need_next_action.py",
+      "to": "agent_diagnostics\\cli_need_next_action.py"
+    },
+    {
+      "from": "config.json",
+      "to": "reports\\config.json"
+    },
+    {
+      "from": "fix_encoding.py",
+      "to": "agent_diagnostics\\fix_encoding.py"
+    },
+    {
+      "from": "hello_world.py",
+      "to": "agent_diagnostics\\hello_world.py"
+    },
+    {
+      "from": "logging_config.py",
+      "to": "agent_diagnostics\\logging_config.py"
+    },
+    {
+      "from": "migrate_memory.py",
+      "to": "agent_diagnostics\\migrate_memory.py"
+    },
+    {
+      "from": "Readme.md",
+      "to": "reports\\Readme.md"
+    },
+    {
+      "from": "readme_content.txt",
+      "to": "backup\\duplicates\\readme_content.txt"
+    },
+    {
+      "from": "run_supervised_task.py",
+      "to": "agent_diagnostics\\run_supervised_task.py"
+    },
+    {
+      "from": "server.log",
+      "to": "backup\\duplicates\\server.log"
+    },
+    {
+      "from": "server_backup_before_fix.py",
+      "to": "agent_diagnostics\\server_backup_before_fix.py"
+    },
+    {
+      "from": "server_backup_final2.py",
+      "to": "agent_diagnostics\\server_backup_final2.py"
+    },
+    {
+      "from": "server_backup_import.py",
+      "to": "agent_diagnostics\\server_backup_import.py"
+    },
+    {
+      "from": "server_backup_qa.py",
+      "to": "agent_diagnostics\\server_backup_qa.py"
+    },
+    {
+      "from": "server_memory_patch.py",
+      "to": "agent_diagnostics\\server_memory_patch.py"
+    },
+    {
+      "from": "test.py",
+      "to": "agent_diagnostics\\test.py"
+    },
+    {
+      "from": "test_cli_auto.py",
+      "to": "agent_tests\\test_cli_auto.py"
+    },
+    {
+      "from": "verify_project_layout.py",
+      "to": "agent_diagnostics\\verify_project_layout.py"
+    },
+    {
+      "from": "__init__.py",
+      "to": "backup\\duplicates\\__init__.py"
+    }
+  ],
+  "failed_compile": {
+    "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "cli_py_exists_in_root": true,
+  "server_py_exists_in_root": true,
+  "ok": false
+}

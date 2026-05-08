@@ -1,0 +1,22 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "previous_audit_ok": false,
+  "restored_cli_server": [],
+  "patched_files": [
+    "agent_runtime_script.py",
+    "agent_diagnostics\\agent_runtime_script.py"
+  ],
+  "created_wrappers": [],
+  "failed_compile": {
+    "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "cli_py_in_root": true,
+  "server_py_in_root": true,
+  "ok": false
+}

@@ -1,0 +1,18 @@
+{
+  "user_profile": {
+    "name": "Unknown",
+    "preferences": {
+      "language": "Vietnamese",
+      "code_style": "clean, commented in Vietnamese",
+      "response_style": "direct, no emoji"
+    },
+    "working_directory": "C:\\Bao_Duy\\rag_agent"
+  },
+  "system_info": {
+    "agent_name": "RAG-Agent",
+    "version": "1.0",
+    "capabilities": ["READ", "WRITE", "DELETE", "LIST_DIR", "SHELL", "PYTHON"],
+    "created_at": "2026-04-30T09:27:12.939Z"
+  },
+  "important_facts": []
+}

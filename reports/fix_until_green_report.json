@@ -1,0 +1,601 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "history": [
+    {
+      "round": 1,
+      "restored": [],
+      "project_paths_created": false,
+      "patched": [
+        "agent_runtime_script.py",
+        "agent_diagnostics\\agent_runtime_script.py"
+      ],
+      "wrappers": [],
+      "moved": [
+        {
+          "from": "agent_memory.json",
+          "to": "backup\\duplicates\\agent_memory_1.json"
+        },
+        {
+          "from": "agent_runtime_script.py",
+          "to": "backup\\duplicates\\agent_runtime_script_1.py"
+        }
+      ],
+      "layout": {
+        "cli.py": true,
+        "server.py": true,
+        "agent_core": true,
+        "agent_runtime": true,
+        "agent_runners": true,
+        "agent_diagnostics": true,
+        "agent_tests": true,
+        "agent_server": true,
+        "logs": true,
+        "reports": true,
+        "backup": true,
+        "memory": true,
+        "agent_core/__init__.py": true,
+        "agent_runtime/__init__.py": true,
+        "agent_runners/__init__.py": true,
+        "agent_diagnostics/__init__.py": true,
+        "agent_tests/__init__.py": true,
+        "agent_server/__init__.py": true
+      },
+      "wrappers_check": {
+        "agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/agent.py",
+          "target_exists": false
+        },
+        "run_agent_task.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/run_agent_task.py",
+          "target_exists": false
+        },
+        "continue_agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/continue_agent.py",
+          "target_exists": false
+        },
+        "status.py": {
+          "wrapper_exists": false,
+          "target": "agent_diagnostics/status.py",
+          "target_exists": false
+        },
+        "cli_supervised.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/cli_supervised.py",
+          "target_exists": false
+        }
+      },
+      "failed_compile": {
+        "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+        "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+      },
+      "old_imports": [],
+      "duplicate_paths": [],
+      "old_script_paths": [],
+      "imports": {
+        "agent_core.agent_tools": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+        },
+        "agent_core.agent_model_client": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_model_client'\n"
+        },
+        "agent_core.agent_task_validator": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_task_validator'\n"
+        },
+        "agent_core.agent_done_certificate": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_done_certificate'\n"
+        },
+        "agent_runtime.agent_runtime_bridge": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_runtime_bridge'\n"
+        },
+        "agent_runtime.agent_autonomous_controller": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_autonomous_controller'\n"
+        },
+        "agent_diagnostics.cli_need_next_action": {
+          "ok": true
+        }
+      },
+      "tool_executor": {
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 643, in tool_executor_check\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+      },
+      "commands": {
+        "status.py": {
+          "ok": false,
+          "returncode": 2,
+          "stdout_tail": "",
+          "stderr_tail": "C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\python.exe: can't open file 'C:\\\\Bao_Duy\\\\rag_agent\\\\status.py': [Errno 2] No such file or directory"
+        },
+        "cli.py_exit": {
+          "ok": false,
+          "returncode": 1,
+          "stdout_tail": "",
+          "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+        }
+      },
+      "ok": false
+    },
+    {
+      "round": 2,
+      "restored": [],
+      "project_paths_created": false,
+      "patched": [
+        "agent_diagnostics\\agent_runtime_script.py"
+      ],
+      "wrappers": [],
+      "moved": [],
+      "layout": {
+        "cli.py": true,
+        "server.py": true,
+        "agent_core": true,
+        "agent_runtime": true,
+        "agent_runners": true,
+        "agent_diagnostics": true,
+        "agent_tests": true,
+        "agent_server": true,
+        "logs": true,
+        "reports": true,
+        "backup": true,
+        "memory": true,
+        "agent_core/__init__.py": true,
+        "agent_runtime/__init__.py": true,
+        "agent_runners/__init__.py": true,
+        "agent_diagnostics/__init__.py": true,
+        "agent_tests/__init__.py": true,
+        "agent_server/__init__.py": true
+      },
+      "wrappers_check": {
+        "agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/agent.py",
+          "target_exists": false
+        },
+        "run_agent_task.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/run_agent_task.py",
+          "target_exists": false
+        },
+        "continue_agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/continue_agent.py",
+          "target_exists": false
+        },
+        "status.py": {
+          "wrapper_exists": false,
+          "target": "agent_diagnostics/status.py",
+          "target_exists": false
+        },
+        "cli_supervised.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/cli_supervised.py",
+          "target_exists": false
+        }
+      },
+      "failed_compile": {
+        "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+        "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+      },
+      "old_imports": [],
+      "duplicate_paths": [],
+      "old_script_paths": [],
+      "imports": {
+        "agent_core.agent_tools": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+        },
+        "agent_core.agent_model_client": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_model_client'\n"
+        },
+        "agent_core.agent_task_validator": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_task_validator'\n"
+        },
+        "agent_core.agent_done_certificate": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_done_certificate'\n"
+        },
+        "agent_runtime.agent_runtime_bridge": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_runtime_bridge'\n"
+        },
+        "agent_runtime.agent_autonomous_controller": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_autonomous_controller'\n"
+        },
+        "agent_diagnostics.cli_need_next_action": {
+          "ok": true
+        }
+      },
+      "tool_executor": {
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 643, in tool_executor_check\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+      },
+      "commands": {
+        "status.py": {
+          "ok": false,
+          "returncode": 2,
+          "stdout_tail": "",
+          "stderr_tail": "C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\python.exe: can't open file 'C:\\\\Bao_Duy\\\\rag_agent\\\\status.py': [Errno 2] No such file or directory"
+        },
+        "cli.py_exit": {
+          "ok": false,
+          "returncode": 1,
+          "stdout_tail": "",
+          "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+        }
+      },
+      "ok": false
+    },
+    {
+      "round": 3,
+      "restored": [],
+      "project_paths_created": false,
+      "patched": [
+        "agent_diagnostics\\agent_runtime_script.py"
+      ],
+      "wrappers": [],
+      "moved": [],
+      "layout": {
+        "cli.py": true,
+        "server.py": true,
+        "agent_core": true,
+        "agent_runtime": true,
+        "agent_runners": true,
+        "agent_diagnostics": true,
+        "agent_tests": true,
+        "agent_server": true,
+        "logs": true,
+        "reports": true,
+        "backup": true,
+        "memory": true,
+        "agent_core/__init__.py": true,
+        "agent_runtime/__init__.py": true,
+        "agent_runners/__init__.py": true,
+        "agent_diagnostics/__init__.py": true,
+        "agent_tests/__init__.py": true,
+        "agent_server/__init__.py": true
+      },
+      "wrappers_check": {
+        "agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/agent.py",
+          "target_exists": false
+        },
+        "run_agent_task.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/run_agent_task.py",
+          "target_exists": false
+        },
+        "continue_agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/continue_agent.py",
+          "target_exists": false
+        },
+        "status.py": {
+          "wrapper_exists": false,
+          "target": "agent_diagnostics/status.py",
+          "target_exists": false
+        },
+        "cli_supervised.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/cli_supervised.py",
+          "target_exists": false
+        }
+      },
+      "failed_compile": {
+        "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+        "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+      },
+      "old_imports": [],
+      "duplicate_paths": [],
+      "old_script_paths": [],
+      "imports": {
+        "agent_core.agent_tools": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+        },
+        "agent_core.agent_model_client": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_model_client'\n"
+        },
+        "agent_core.agent_task_validator": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_task_validator'\n"
+        },
+        "agent_core.agent_done_certificate": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_done_certificate'\n"
+        },
+        "agent_runtime.agent_runtime_bridge": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_runtime_bridge'\n"
+        },
+        "agent_runtime.agent_autonomous_controller": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_autonomous_controller'\n"
+        },
+        "agent_diagnostics.cli_need_next_action": {
+          "ok": true
+        }
+      },
+      "tool_executor": {
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 643, in tool_executor_check\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+      },
+      "commands": {
+        "status.py": {
+          "ok": false,
+          "returncode": 2,
+          "stdout_tail": "",
+          "stderr_tail": "C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\python.exe: can't open file 'C:\\\\Bao_Duy\\\\rag_agent\\\\status.py': [Errno 2] No such file or directory"
+        },
+        "cli.py_exit": {
+          "ok": false,
+          "returncode": 1,
+          "stdout_tail": "",
+          "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+        }
+      },
+      "ok": false
+    },
+    {
+      "round": 4,
+      "restored": [],
+      "project_paths_created": false,
+      "patched": [
+        "agent_diagnostics\\agent_runtime_script.py"
+      ],
+      "wrappers": [],
+      "moved": [],
+      "layout": {
+        "cli.py": true,
+        "server.py": true,
+        "agent_core": true,
+        "agent_runtime": true,
+        "agent_runners": true,
+        "agent_diagnostics": true,
+        "agent_tests": true,
+        "agent_server": true,
+        "logs": true,
+        "reports": true,
+        "backup": true,
+        "memory": true,
+        "agent_core/__init__.py": true,
+        "agent_runtime/__init__.py": true,
+        "agent_runners/__init__.py": true,
+        "agent_diagnostics/__init__.py": true,
+        "agent_tests/__init__.py": true,
+        "agent_server/__init__.py": true
+      },
+      "wrappers_check": {
+        "agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/agent.py",
+          "target_exists": false
+        },
+        "run_agent_task.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/run_agent_task.py",
+          "target_exists": false
+        },
+        "continue_agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/continue_agent.py",
+          "target_exists": false
+        },
+        "status.py": {
+          "wrapper_exists": false,
+          "target": "agent_diagnostics/status.py",
+          "target_exists": false
+        },
+        "cli_supervised.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/cli_supervised.py",
+          "target_exists": false
+        }
+      },
+      "failed_compile": {
+        "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+        "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+      },
+      "old_imports": [],
+      "duplicate_paths": [],
+      "old_script_paths": [],
+      "imports": {
+        "agent_core.agent_tools": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+        },
+        "agent_core.agent_model_client": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_model_client'\n"
+        },
+        "agent_core.agent_task_validator": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_task_validator'\n"
+        },
+        "agent_core.agent_done_certificate": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_done_certificate'\n"
+        },
+        "agent_runtime.agent_runtime_bridge": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_runtime_bridge'\n"
+        },
+        "agent_runtime.agent_autonomous_controller": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_autonomous_controller'\n"
+        },
+        "agent_diagnostics.cli_need_next_action": {
+          "ok": true
+        }
+      },
+      "tool_executor": {
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 643, in tool_executor_check\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+      },
+      "commands": {
+        "status.py": {
+          "ok": false,
+          "returncode": 2,
+          "stdout_tail": "",
+          "stderr_tail": "C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\python.exe: can't open file 'C:\\\\Bao_Duy\\\\rag_agent\\\\status.py': [Errno 2] No such file or directory"
+        },
+        "cli.py_exit": {
+          "ok": false,
+          "returncode": 1,
+          "stdout_tail": "",
+          "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+        }
+      },
+      "ok": false
+    },
+    {
+      "round": 5,
+      "restored": [],
+      "project_paths_created": false,
+      "patched": [
+        "agent_diagnostics\\agent_runtime_script.py"
+      ],
+      "wrappers": [],
+      "moved": [],
+      "layout": {
+        "cli.py": true,
+        "server.py": true,
+        "agent_core": true,
+        "agent_runtime": true,
+        "agent_runners": true,
+        "agent_diagnostics": true,
+        "agent_tests": true,
+        "agent_server": true,
+        "logs": true,
+        "reports": true,
+        "backup": true,
+        "memory": true,
+        "agent_core/__init__.py": true,
+        "agent_runtime/__init__.py": true,
+        "agent_runners/__init__.py": true,
+        "agent_diagnostics/__init__.py": true,
+        "agent_tests/__init__.py": true,
+        "agent_server/__init__.py": true
+      },
+      "wrappers_check": {
+        "agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/agent.py",
+          "target_exists": false
+        },
+        "run_agent_task.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/run_agent_task.py",
+          "target_exists": false
+        },
+        "continue_agent.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/continue_agent.py",
+          "target_exists": false
+        },
+        "status.py": {
+          "wrapper_exists": false,
+          "target": "agent_diagnostics/status.py",
+          "target_exists": false
+        },
+        "cli_supervised.py": {
+          "wrapper_exists": false,
+          "target": "agent_runners/cli_supervised.py",
+          "target_exists": false
+        }
+      },
+      "failed_compile": {
+        "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+        "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+        "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+      },
+      "old_imports": [],
+      "duplicate_paths": [],
+      "old_script_paths": [],
+      "imports": {
+        "agent_core.agent_tools": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+        },
+        "agent_core.agent_model_client": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_model_client'\n"
+        },
+        "agent_core.agent_task_validator": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_task_validator'\n"
+        },
+        "agent_core.agent_done_certificate": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_core.agent_done_certificate'\n"
+        },
+        "agent_runtime.agent_runtime_bridge": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_runtime_bridge'\n"
+        },
+        "agent_runtime.agent_autonomous_controller": {
+          "ok": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 626, in import_check\n  File \"C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\Lib\\importlib\\__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1140, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'agent_runtime.agent_autonomous_controller'\n"
+        },
+        "agent_diagnostics.cli_need_next_action": {
+          "ok": true
+        }
+      },
+      "tool_executor": {
+        "ok": false,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Bao_Duy\\rag_agent\\agent_runtime_script.py\", line 643, in tool_executor_check\nModuleNotFoundError: No module named 'agent_core.agent_tools'\n"
+      },
+      "commands": {
+        "status.py": {
+          "ok": false,
+          "returncode": 2,
+          "stdout_tail": "",
+          "stderr_tail": "C:\\Users\\Win 11\\miniconda3\\envs\\rag_agent\\python.exe: can't open file 'C:\\\\Bao_Duy\\\\rag_agent\\\\status.py': [Errno 2] No such file or directory"
+        },
+        "cli.py_exit": {
+          "ok": false,
+          "returncode": 1,
+          "stdout_tail": "",
+          "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+        }
+      },
+      "ok": false
+    }
+  ],
+  "ok": false
+}

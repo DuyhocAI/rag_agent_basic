@@ -1,0 +1,145 @@
+{
+  "project_root": {
+    "exists": true,
+    "is_dir": true,
+    "path": "C:\\Bao_Duy\\rag_agent"
+  },
+  "required_dirs": {
+    "agent_core": true,
+    "agent_runtime": true,
+    "agent_runners": true,
+    "agent_diagnostics": true,
+    "agent_tests": true,
+    "agent_server": true,
+    "logs": true,
+    "reports": true,
+    "backup": true,
+    "memory": true
+  },
+  "root_required_files": {
+    "cli.py": true,
+    "server.py": true
+  },
+  "init_files": {
+    "agent_core/__init__.py": true,
+    "agent_runtime/__init__.py": true,
+    "agent_runners/__init__.py": true,
+    "agent_diagnostics/__init__.py": true,
+    "agent_tests/__init__.py": true,
+    "agent_server/__init__.py": true
+  },
+  "failed_compile": {
+    "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "old_imports": [],
+  "duplicate_paths": [
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "logs/logs/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "reports/reports/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "backup/backup/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "memory/memory/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_core/agent_core/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_runtime/agent_runtime/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_runners/agent_runners/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_diagnostics/agent_diagnostics/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_tests/agent_tests/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "bad_path": "agent_server/agent_server/"
+    }
+  ],
+  "old_script_paths": [
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "run_task_autonomous_once.py",
+      "expected": "agent_runners/run_task_autonomous_once.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "run_supervised_task.py",
+      "expected": "agent_runners/run_supervised_task.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "run_agent_task.py",
+      "expected": "agent_runners/run_agent_task.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "agent_watchdog.py",
+      "expected": "agent_runners/agent_watchdog.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "monitor_agent.py",
+      "expected": "agent_runners/monitor_agent.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "doctor_auto_fix.py",
+      "expected": "agent_diagnostics/doctor_auto_fix.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "auto_fix_agent_from_diagnosis.py",
+      "expected": "agent_diagnostics/auto_fix_agent_from_diagnosis.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "detect_server_endpoint.py",
+      "expected": "agent_diagnostics/detect_server_endpoint.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "agent_doctor.py",
+      "expected": "agent_diagnostics/agent_doctor.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "cli_need_next_action.py",
+      "expected": "agent_diagnostics/cli_need_next_action.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "old_script": "audit_stop_condition.py",
+      "expected": "agent_diagnostics/audit_stop_condition.py"
+    }
+  ],
+  "root_extra_files": [
+    "agent_memory.json",
+    "agent_runtime_script.py"
+  ],
+  "ok": false
+}

@@ -1,0 +1,354 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "dirs": {
+    "agent_core": true,
+    "agent_runtime": false,
+    "agent_runners": false,
+    "agent_diagnostics": false,
+    "agent_tests": false,
+    "agent_server": false,
+    "logs": true,
+    "reports": false,
+    "backup": false,
+    "memory": true
+  },
+  "root_required": {
+    "cli.py": true,
+    "server.py": true
+  },
+  "root_extras": [
+    "agent_done_certificate.py",
+    "agent_memory.json",
+    "agent_runtime_script.py",
+    "agent_server_manager.py",
+    "agent_stop_signal.py",
+    "agent_watchdog.py",
+    "auto_test_cli.py",
+    "BAO_CAO_HOAN_THANH.md",
+    "chat_server.py",
+    "cli.log",
+    "cli_backup.py",
+    "cli_backup_encoding.py",
+    "cli_backup_qa.py",
+    "cli_need_next_action.py",
+    "config.json",
+    "fix_encoding.py",
+    "hello_world.py",
+    "logging_config.py",
+    "migrate_memory.py",
+    "Readme.md",
+    "run_supervised_task.py",
+    "server.log",
+    "server_backup_before_fix.py",
+    "server_backup_final2.py",
+    "server_backup_import.py",
+    "server_backup_qa.py",
+    "server_memory_patch.py",
+    "test.py",
+    "test_cli_auto.py",
+    "verify_project_layout.py",
+    "__init__.py"
+  ],
+  "failed_compile": {
+    "server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\server_backup_before_fix.py\", line 89\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\server_backup_final2.py\", line 89\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "old_imports": [
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_tools import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "import agent_tools"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_self_debate import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_task_validator import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_completion_guard import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_task_state import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_done_certificate import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_memory_store import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_model_client import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_endpoint_detector import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_server_manager import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_strict_tool_policy import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_intent_fallback import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_stop_signal import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_runtime_bridge import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from agent_autonomous_controller import"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "pattern": "from cli_need_next_action import"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "pattern": "from cli_need_next_action import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_tools import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "import agent_tools"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_self_debate import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_task_validator import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_completion_guard import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_task_state import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_done_certificate import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_memory_store import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_model_client import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_endpoint_detector import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_server_manager import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_strict_tool_policy import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_intent_fallback import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_stop_signal import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_runtime_bridge import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from agent_autonomous_controller import"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "pattern": "from cli_need_next_action import"
+    }
+  ],
+  "old_script_paths": [
+    {
+      "file": "agent_runtime_script.py",
+      "script": "run_task_autonomous_once.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "run_supervised_task.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "run_agent_task.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "agent_watchdog.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "monitor_agent.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "doctor_auto_fix.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "auto_fix_agent_from_diagnosis.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "detect_server_endpoint.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "agent_doctor.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "cli_need_next_action.py"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "script": "audit_stop_condition.py"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "script": "run_supervised_task.py"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "script": "run_agent_task.py"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "script": "doctor_auto_fix.py"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "script": "auto_fix_agent_from_diagnosis.py"
+    },
+    {
+      "file": "agent_watchdog.py",
+      "script": "detect_server_endpoint.py"
+    },
+    {
+      "file": "run_supervised_task.py",
+      "script": "run_task_autonomous_once.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "run_task_autonomous_once.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "run_supervised_task.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "run_agent_task.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "agent_watchdog.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "monitor_agent.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "doctor_auto_fix.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "auto_fix_agent_from_diagnosis.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "detect_server_endpoint.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "agent_doctor.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "cli_need_next_action.py"
+    },
+    {
+      "file": "verify_project_layout.py",
+      "script": "audit_stop_condition.py"
+    }
+  ],
+  "duplicate_paths": [
+    {
+      "file": "agent_runtime_script.py",
+      "token": "logs/logs/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "reports/reports/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "backup/backup/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "memory/memory/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_core/agent_core/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_runtime/agent_runtime/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_runners/agent_runners/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_diagnostics/agent_diagnostics/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_tests/agent_tests/"
+    },
+    {
+      "file": "agent_runtime_script.py",
+      "token": "agent_server/agent_server/"
+    }
+  ]
+}

@@ -1,0 +1,1751 @@
+﻿# Báo cáo liên kết function giữa các file
+
+- Thư mục phân tích: `D:\rag_agent`
+- Số file Python đã đọc/phân tích: **53**
+- Số liên kết import nội bộ: **25**
+- Số liên kết lời gọi liên-file dạng ứng viên: **948**
+
+## 1. File Python đã phân tích
+- `agent_core/__init__.py`
+- `agent_core/cli_auto.py`
+- `agent_core/project_paths.py`
+- `agent_diagnostics/__init__.py`
+- `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_runners/__init__.py`
+- `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/auto_test_cli.py`
+- `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/fix_encoding.py`
+- `agent_diagnostics/hello_world.py`
+- `agent_diagnostics/logging_config.py`
+- `agent_diagnostics/migrate_memory.py`
+- `agent_diagnostics/run_supervised_task.py`
+- `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py`
+- `agent_diagnostics/server_memory_patch.py`
+- `agent_diagnostics/test.py`
+- `agent_diagnostics/verify_project_layout.py`
+- `agent_runtime/__init__.py`
+- `agent_server/__init__.py`
+- `agent_tests/__init__.py`
+- `agent_tests/test_cli_auto.py`
+- `auth.py`
+- `cli.py`
+- `core/__init__.py`
+- `core/agent.py`
+- `core/agent_backup_import.py`
+- `dashboard/__init__.py`
+- `memory/memory_manager.py`
+- `rag/__init__.py`
+- `rag/store.py`
+- `run_and_dump_pytest.py`
+- `server.py`
+- `test_cli.py`
+- `tests/__init__.py`
+- `tools/__init__.py`
+- `tools/bug_fixer.py`
+- `tools/code_gen.py`
+- `tools/evaluator.py`
+- `tools/model_improver.py`
+- `tools/python_executor.py`
+- `tools/test_runner.py`
+- `tools/visualizer.py`
+- `UI.py`
+
+## 2. Định nghĩa function/class theo file
+
+### `agent_core/project_paths.py`
+- def `project_root` dòng 13
+- def `ensure_dir` dòng 18
+- def `log_path` dòng 32
+- def `report_path` dòng 37
+- def `backup_path` dòng 42
+- def `memory_path` dòng 47
+- def `root_path` dòng 52
+
+### `agent_diagnostics/agent_done_certificate.py`
+- class `DoneCertificate` dòng 15
+- def `__init__` dòng 16
+- def `clear` dòng 22
+- def `issue` dòng 27
+- def `exists` dòng 55
+- def `load` dòng 59
+
+### `agent_diagnostics/agent_server_manager.py`
+- class `AgentServerManager` dòng 17
+- def `__init__` dòng 18
+- def `is_server_alive` dòng 31
+- def `start_if_needed` dòng 42
+- def `stop_if_started_by_me` dòng 86
+
+### `agent_diagnostics/agent_stop_signal.py`
+- class `StopSignal` dòng 15
+- def `__init__` dòng 16
+- def `request_stop` dòng 22
+- def `start_ctrl_q_listener` dòng 27
+- def `_listen_ctrl_q` dòng 38
+- def `_listen_windows` dòng 45
+- def `_listen_unix` dòng 64
+
+### `agent_diagnostics/agent_watchdog.py`
+- class `CtrlQStopper` dòng 20
+- def `__init__` dòng 21
+- def `start` dòng 26
+- def `request_stop` dòng 31
+- def `_listen` dòng 36
+- def `_listen_windows` dòng 43
+- def `_listen_unix` dòng 62
+- def `log` dòng 93
+- def `run_command` dòng 102
+- def `ensure_server_or_endpoint` dòng 149
+- def `run_doctor_fix` dòng 161
+- def `run_supervised_task` dòng 179
+- def `print_decision` dòng 197
+- def `watchdog_loop` dòng 206
+- def `main` dòng 280
+
+### `agent_diagnostics/chat_server.py`
+- class `ChatServer` dòng 18
+- def `__init__` dòng 19
+- def `broadcast` dòng 26
+- def `handle_client` dòng 41
+- def `remove_client` dòng 61
+- def `start` dòng 70
+- def `stop` dòng 103
+
+### `agent_diagnostics/cli_backup.py`
+- def `_memory_load` dòng 89
+- def `_memory_save` dòng 102
+- def `_memory_record_task` dòng 112
+- def `_memory_record_error` dòng 128
+- def `_backup_file` dòng 136
+- def `safe_write` dòng 153
+- def `safe_delete` dòng 162
+- def `_now_iso` dòng 173
+- def `_now_str` dòng 177
+- def `_print_header` dòng 181
+- def `_print_info` dòng 188
+- def `_print_ok` dòng 192
+- def `_print_warn` dòng 196
+- def `_print_err` dòng 200
+- def `_progress_bar` dòng 204
+- def `_status_colour` dòng 211
+- def `_render_dashboard` dòng 225
+- def `_load_config` dòng 256
+- def `_base_url` dòng 264
+- def `_http_get` dòng 272
+- def `_http_post` dòng 280
+- def `_wait_for_server` dòng 294
+- def `_infer_phase` dòng 306
+- def `cmd_run` dòng 330
+- def `cmd_status` dòng 435
+- def `cmd_task` dòng 454
+- def `cmd_logs` dòng 475
+- def `cmd_memory` dòng 491
+- def `_repl` dòng 529
+- def `_sigint_handler` dòng 580
+- def `main` dòng 589
+
+### `agent_diagnostics/cli_backup_encoding.py`
+- def `_init_cli_log` dòng 71
+- def `_log_cli` dòng 77
+- def `_memory_load` dòng 91
+- def `_memory_save` dòng 103
+- def `_memory_record_task` dòng 112
+- def `_memory_record_error` dòng 127
+- def `_backup_file` dòng 131
+- def `safe_write` dòng 146
+- def `safe_delete` dòng 153
+- def `_now_iso` dòng 163
+- def `_now_str` dòng 166
+- def `_print_header` dòng 169
+- def `_print_info` dòng 175
+- def `_print_ok` dòng 180
+- def `_print_warn` dòng 185
+- def `_print_err` dòng 190
+- def `_progress_bar` dòng 195
+- def `_status_colour` dòng 201
+- def `_render_dashboard` dòng 211
+- def `_load_config` dòng 243
+- def `_base_url` dòng 249
+- def `_http_get` dòng 257
+- def `_http_post` dòng 264
+- def `_wait_for_server` dòng 277
+- def `_infer_phase` dòng 289
+- def `cmd_run` dòng 313
+- def `cmd_status` dòng 409
+- def `cmd_task` dòng 424
+- def `cmd_logs` dòng 450
+- def `cmd_memory` dòng 468
+- def `_repl` dòng 512
+- def `_sigint_handler` dòng 573
+- def `main` dòng 584
+
+### `agent_diagnostics/cli_backup_qa.py`
+- def `_init_cli_log` dòng 72
+- def `_log_cli` dòng 78
+- def `_memory_load` dòng 92
+- def `_memory_save` dòng 104
+- def `_memory_record_task` dòng 113
+- def `_memory_record_error` dòng 128
+- def `_backup_file` dòng 132
+- def `safe_write` dòng 147
+- def `safe_delete` dòng 154
+- def `_now_iso` dòng 164
+- def `_now_str` dòng 167
+- def `_print_header` dòng 170
+- def `_print_info` dòng 176
+- def `_print_ok` dòng 181
+- def `_print_warn` dòng 186
+- def `_print_err` dòng 191
+- def `_progress_bar` dòng 196
+- def `_status_colour` dòng 202
+- def `_render_dashboard` dòng 212
+- def `_load_config` dòng 244
+- def `_base_url` dòng 250
+- def `_http_get` dòng 258
+- def `_http_post` dòng 265
+- def `_wait_for_server` dòng 278
+- def `_infer_phase` dòng 290
+- def `cmd_run` dòng 314
+- def `cmd_status` dòng 410
+- def `cmd_task` dòng 425
+- def `cmd_logs` dòng 451
+- def `cmd_memory` dòng 469
+- def `_repl` dòng 513
+- def `_sigint_handler` dòng 574
+- def `main` dòng 585
+
+### `agent_diagnostics/cli_need_next_action.py`
+- def `read_text` dòng 39
+- def `read_json` dòng 49
+- def `tail` dòng 65
+- def `collect_all_text` dòng 70
+- def `analyze` dòng 82
+- def `infer_current_task` dòng 150
+- def `decide_next_action` dòng 171
+- def `print_state_summary` dòng 325
+- def `print_log_tails` dòng 365
+- def `main` dòng 392
+
+### `agent_diagnostics/fix_encoding.py`
+- def `setup_utf8_encoding` dòng 12
+
+### `agent_diagnostics/hello_world.py`
+- def `main` dòng 13
+
+### `agent_diagnostics/logging_config.py`
+- def `setup_logger` dòng 21
+
+### `agent_diagnostics/migrate_memory.py`
+- def `migrate_to_fts5` dòng 18
+
+### `agent_diagnostics/run_supervised_task.py`
+- def `log` dòng 22
+- def `clear_old_done_certificate` dòng 31
+- def `load_certificate` dòng 38
+- def `has_done_certificate` dòng 51
+- def `build_task_from_argv` dòng 57
+- def `run_once` dòng 65
+- def `main` dòng 112
+
+### `agent_diagnostics/server_backup_before_fix.py`
+- async def `lifespan` dòng 69
+- class `RunRequest` dòng 79
+- def `_load_config` dòng 86
+- def `_get_agent` dòng 93
+- def `_run_task_sync` dòng 102
+- async def `health` dòng 139
+- async def `status` dòng 143
+- async def `run_task` dòng 150
+- async def `get_task` dòng 164
+- async def `get_logs` dòng 171
+- async def `websocket_endpoint` dòng 179
+
+### `agent_diagnostics/server_backup_final2.py`
+- async def `lifespan` dòng 69
+- class `RunRequest` dòng 79
+- def `_load_config` dòng 86
+- def `_get_agent` dòng 93
+- def `_run_task_sync` dòng 102
+- async def `health` dòng 134
+- async def `status` dòng 138
+- async def `run_task` dòng 145
+- async def `get_task` dòng 159
+- async def `get_logs` dòng 166
+- async def `websocket_endpoint` dòng 174
+
+### `agent_diagnostics/server_backup_import.py`
+- async def `lifespan` dòng 69
+- class `RunRequest` dòng 79
+- def `_load_config` dòng 86
+- def `_get_agent` dòng 93
+- def `_run_task_sync` dòng 101
+- async def `health` dòng 115
+- async def `status` dòng 119
+- async def `run_task` dòng 126
+- async def `get_task` dòng 140
+- async def `get_logs` dòng 147
+- async def `websocket_endpoint` dòng 155
+
+### `agent_diagnostics/server_backup_qa.py`
+- async def `lifespan` dòng 69
+- class `RunRequest` dòng 79
+- def `_load_config` dòng 86
+- def `_get_agent` dòng 93
+- def `_run_task_sync` dòng 101
+- async def `health` dòng 115
+- async def `status` dòng 119
+- async def `run_task` dòng 126
+- async def `get_task` dòng 140
+- async def `get_logs` dòng 147
+- async def `websocket_endpoint` dòng 155
+
+### `agent_diagnostics/server_memory_patch.py`
+- async def `memory_performance` dòng 100
+
+### `agent_diagnostics/test.py`
+- class `RAGAgent` dòng 27
+- def `__init__` dòng 28
+- def `load_memory` dòng 85
+- def `save_memory` dòng 95
+- def `trim_history` dòng 106
+- def `call_api` dòng 149
+- def `execute_python` dòng 178
+- def `fs_list_dir` dòng 210
+- def `fs_read_file` dòng 225
+- def `fs_write_file` dòng 235
+- def `fs_append_file` dòng 246
+- def `fs_delete_file` dòng 256
+- def `fs_mkdir` dòng 265
+- def `fs_move_file` dòng 273
+- def `fs_copy_file` dòng 281
+- def `_extract_blocks` dòng 293
+- def `_parse_two_paths` dòng 314
+- def `handle_fs_commands` dòng 333
+- def `run` dòng 393
+
+### `agent_diagnostics/verify_project_layout.py`
+- def `check_dirs` dòng 52
+- def `check_wrappers` dòng 60
+- def `check_init_files` dòng 68
+- def `py_compile_all` dòng 76
+- def `scan_bad_imports` dòng 100
+- def `scan_bad_script_paths` dòng 140
+- def `main` dòng 175
+
+### `agent_tests/test_cli_auto.py`
+- def `test_cli_auto_help_imports` dòng 17
+- def `test_socket_available` dòng 21
+- def `test_fix_encoding_module_loaded` dòng 26
+- def `test_main_exists` dòng 30
+- def `test_timing_basic` dòng 34
+
+### `auth.py`
+- def `_conn` dòng 72
+- def `init_auth_db` dòng 88
+- def `_hash_password` dòng 138
+- def `_check_password` dòng 149
+- def `_hash_key` dòng 154
+- def `_generate_api_key` dòng 159
+- def `_new_id` dòng 164
+- def `_now_iso` dòng 168
+- def `_xor_obfuscate` dòng 177
+- def `_xor_deobfuscate` dòng 182
+- def `create_user` dòng 192
+- def `authenticate_user` dòng 212
+- def `get_user` dòng 223
+- def `list_users` dòng 229
+- def `deactivate_user` dòng 237
+- def `create_api_key` dòng 246
+- def `validate_api_key` dòng 262
+- def `rotate_api_key` dòng 288
+- def `list_api_keys` dòng 298
+- def `get_ckey_api_key` dòng 312
+- def `update_ckey_api_key` dòng 326
+- def `_rate_check` dòng 345
+- def `log_request` dòng 381
+- def `get_usage_stats` dòng 404
+- def `_extract_raw_key` dòng 441
+- async def `require_auth` dòng 457
+- async def `require_admin` dòng 489
+- class `RegisterRequest` dòng 504
+- class `LoginRequest` dòng 511
+- class `SetCkeyRequest` dòng 516
+- class `RotateKeyRequest` dòng 520
+- async def `register` dòng 527
+- async def `login` dòng 560
+- async def `me` dòng 587
+- async def `usage` dòng 600
+- async def `rotate_key` dòng 605
+- async def `list_keys` dòng 615
+- async def `set_ckey` dòng 620
+- async def `get_ckey` dòng 630
+- async def `admin_list_users` dòng 642
+- async def `admin_deactivate` dòng 648
+- async def `admin_set_plan` dòng 655
+- async def `admin_usage` dòng 671
+- async def `admin_log` dòng 676
+
+### `cli.py`
+- def `render_status` dòng 105
+- def `_print_info` dòng 132
+- def `_print_ok` dòng 133
+- def `_print_warn` dòng 134
+- def `_print_err` dòng 135
+- def `_print_header` dòng 136
+- def `_now_str` dòng 168
+- def `_print_agent` dòng 174
+- def `_progress_bar` dòng 178
+- def `_sc` dòng 184
+- def `_load_config` dòng 191
+- def `_save_config` dòng 197
+- def `_base_url` dòng 201
+- def `_api_key` dòng 208
+- def `_auth_headers` dòng 215
+- def `_http_get` dòng 222
+- def `_http_post` dòng 238
+- def `_http_post_raw` dòng 256
+- def `_wait_for_server` dòng 272
+- def `_render_dashboard` dòng 286
+- def `_infer_phase` dòng 292
+- def `_display_memory_snapshot` dòng 310
+- def `_display_facts` dòng 313
+- def `_chatbot_repl` dòng 383
+- def `_tick_progress` dòng 927
+- def `cmd_status` dòng 994
+- def `cmd_memory` dòng 999
+- def `cmd_task` dòng 1003
+- def `cmd_logs` dòng 1010
+- def `cmd_run` dòng 1021
+- def `_project_repl` dòng 1111
+- def `_main_menu` dòng 1138
+- def `_sigint` dòng 1179
+- def `_ensure_auth` dòng 1184
+- def `main` dòng 1289
+- def `_maybe_auth` dòng 1309
+
+### `core/agent.py`
+- def `_load_config` dòng 31
+- def `_make_client` dòng 36
+- class `RAGAgent` dòng 47
+- def `__init__` dòng 61
+- def `run` dòng 92
+- def `_create_project_dir` dòng 192
+- def `_save` dòng 207
+- def `_save_json` dòng 212
+
+### `core/agent_backup_import.py`
+- def `_load_config` dòng 31
+- def `_make_client` dòng 36
+- class `RAGAgent` dòng 47
+- def `__init__` dòng 61
+- def `run` dòng 92
+- def `_create_project_dir` dòng 192
+- def `_save` dòng 207
+- def `_save_json` dòng 212
+
+### `memory/memory_manager.py`
+- class `MemoryManager` dòng 17
+- def `__init__` dòng 18
+- def `_load_json` dòng 27
+- def `_save_json` dòng 35
+- def `get_core_memory` dòng 41
+- def `update_user_preference` dòng 45
+- def `add_important_fact` dòng 51
+- def `add_message` dòng 61
+- def `get_recent_messages` dòng 79
+- def `log_task` dòng 85
+- def `log_error` dòng 107
+- def `learn_pattern` dòng 120
+- def `build_context` dòng 135
+- def `_format_messages` dòng 157
+
+### `rag/store.py`
+- class `RAGStore` dòng 25
+- def `__init__` dòng 31
+- def `add` dòng 54
+- def `query` dòng 69
+- def `count` dòng 93
+
+### `server.py`
+- def `_load_config` dòng 105
+- def `_get_client` dòng 143
+- def `_llm` dòng 148
+- def `_llm_messages` dòng 156
+- def `_llm_supervisor` dòng 162
+- def `_strip_fences` dòng 172
+- def `_now_iso` dòng 177
+- def `_ltm_connect` dòng 186
+- def `_ltm_init` dòng 192
+- class `LongTermMemory` dòng 253
+- def `store_episode` dòng 258
+- def `search_episodes` dòng 276
+- def `get_recent_episodes` dòng 296
+- def `remember_fact` dòng 308
+- def `recall_facts` dòng 327
+- def `list_facts` dòng 350
+- def `record_task` dòng 367
+- def `update_task` dòng 377
+- def `get_task_stats` dòng 387
+- def `get_recent_tasks` dòng 396
+- def `store_procedure` dòng 407
+- def `recall_procedures` dòng 424
+- def `inc_stat` dòng 441
+- def `get_stats` dòng 452
+- class `ShortTermMemory` dòng 468
+- def `__init__` dòng 480
+- def `add_turn` dòng 491
+- def `get_messages` dòng 502
+- def `should_consolidate` dòng 506
+- def `set_ctx` dòng 511
+- def `get_ctx` dòng 514
+- def `ctx_summary` dòng 517
+- def `log_exec` dòng 531
+- def `log_action` dòng 538
+- def `consolidate` dòng 545
+- def `reset` dòng 597
+- def `_backup` dòng 612
+- def `safe_write` dòng 626
+- def `safe_delete` dòng 631
+- def `get_cwd` dòng 643
+- def `execute_python` dòng 646
+- def `execute_shell` dòng 676
+- def `read_file` dòng 699
+- def `list_dir` dòng 711
+- def `_ensure_pyautogui` dòng 731
+- def `mouse_move` dòng 740
+- def `mouse_click` dòng 748
+- def `mouse_scroll` dòng 756
+- def `type_text` dòng 764
+- def `key_press` dòng 772
+- def `take_screenshot` dòng 785
+- def `web_search` dòng 816
+- def `_execute_action` dòng 880
+- def `_run_actions` dòng 980
+- def `_build_system_prompt` dòng 1047
+- class `SupervisorVerdict` dòng 1112
+- def `__init__` dòng 1116
+- def `__repr__` dòng 1132
+- class `Supervisor` dòng 1137
+- def `__init__` dòng 1143
+- def `reset` dòng 1147
+- def `record_step` dòng 1150
+- def `evaluate` dòng 1158
+- def `debate_with_agent` dòng 1176
+- class `ChatEngine` dòng 1194
+- def `__init__` dòng 1200
+- def `history` dòng 1208
+- def `exec_log` dòng 1212
+- def `action_log` dòng 1216
+- def `_cwd` dòng 1219
+- def `chat` dòng 1222
+- def `reset` dòng 1398
+- def `memory_snapshot` dòng 1401
+- def `_self_debate` dòng 1430
+- def `_self_fix_thread` dòng 1451
+- def `_project_dir` dòng 1520
+- def `_run_tests` dòng 1526
+- def `_evaluate_code` dòng 1550
+- def `_run_project_task` dòng 1569
+- async def `lifespan` dòng 1725
+- class `RunRequest` dòng 1741
+- class `ChatRequest` dòng 1745
+- class `CwdRequest` dòng 1750
+- class `ChatResetRequest` dòng 1754
+- class `FactRequest` dòng 1757
+- class `RecallRequest` dòng 1764
+- async def `health` dòng 1772
+- async def `server_status` dòng 1782
+- async def `get_activity` dòng 1792
+- async def `get_chat_progress` dòng 1798
+- async def `chat_endpoint` dòng 1807
+- async def `chat_reset` dòng 1837
+- async def `set_cwd` dòng 1844
+- async def `get_cwd_endpoint` dòng 1857
+- async def `chat_history` dòng 1861
+- async def `chat_memory` dòng 1875
+- async def `chat_sessions` dòng 1883
+- async def `store_fact` dòng 1893
+- async def `get_facts` dòng 1899
+- async def `recall_facts` dòng 1903
+- async def `get_episodes` dòng 1908
+- async def `memory_stats` dòng 1912
+- async def `force_consolidate` dòng 1920
+- async def `fs_list` dòng 1932
+- async def `fs_read` dòng 1936
+- async def `fs_shell` dòng 1940
+- async def `api_screenshot` dòng 1946
+- async def `api_mouse_move` dòng 1950
+- async def `api_mouse_click` dòng 1954
+- async def `api_key_press` dòng 1958
+- async def `api_type_text` dòng 1962
+- async def `run_project` dòng 1968
+- async def `get_task` dòng 1983
+- async def `list_tasks` dòng 1988
+- async def `get_logs` dòng 1994
+- async def `ws_endpoint` dòng 2004
+
+### `test_cli.py`
+- def `render_status` dòng 102
+- def `_print_info` dòng 129
+- def `_print_ok` dòng 130
+- def `_print_warn` dòng 131
+- def `_print_err` dòng 132
+- def `_print_header` dòng 133
+- def `_now_str` dòng 165
+- def `_print_agent` dòng 171
+- def `_progress_bar` dòng 175
+- def `_sc` dòng 181
+- def `_load_config` dòng 188
+- def `_save_config` dòng 194
+- def `_base_url` dòng 198
+- def `_api_key` dòng 205
+- def `_auth_headers` dòng 212
+- def `_http_get` dòng 219
+- def `_http_post` dòng 235
+- def `_http_post_raw` dòng 253
+- def `_wait_for_server` dòng 269
+- def `_render_dashboard` dòng 283
+- def `_infer_phase` dòng 289
+- def `_display_memory_snapshot` dòng 307
+- def `_display_facts` dòng 310
+- def `_chatbot_repl` dòng 380
+- def `_tick_progress` dòng 891
+- def `cmd_status` dòng 967
+- def `cmd_memory` dòng 972
+- def `cmd_task` dòng 976
+- def `cmd_logs` dòng 983
+- def `cmd_run` dòng 994
+- def `_project_repl` dòng 1084
+- def `_main_menu` dòng 1087
+- def `_sigint` dòng 1128
+- def `_ensure_auth` dòng 1133
+- def `main` dòng 1238
+- def `_maybe_auth` dòng 1258
+
+### `tools/bug_fixer.py`
+- class `BugFixer` dòng 34
+- def `__init__` dòng 35
+- def `fix` dòng 40
+- def `_strip_fences` dòng 71
+
+### `tools/code_gen.py`
+- class `CodeGenerator` dòng 35
+- def `__init__` dòng 36
+- def `generate` dòng 41
+- def `_strip_fences` dòng 71
+
+### `tools/evaluator.py`
+- class `Evaluator` dòng 23
+- def `evaluate` dòng 31
+- def `_compute_score` dòng 66
+- def `_code_quality_score` dòng 87
+
+### `tools/model_improver.py`
+- class `ModelImprover` dòng 37
+- def `__init__` dòng 38
+- def `improve` dòng 43
+- def `_strip_fences` dòng 72
+
+### `tools/python_executor.py`
+- class `PythonExecutor` dòng 19
+- def `__init__` dòng 22
+- def `execute` dòng 25
+- def `execute_and_get_result` dòng 81
+
+### `tools/test_runner.py`
+- def `_load_main` dòng 39
+- def `test_main_importable` dòng 46
+- def `test_metrics_written` dòng 51
+- class `TestRunner` dòng 75
+- def `run` dòng 81
+
+### `tools/visualizer.py`
+- class `Visualizer` dòng 22
+- def `plot_metrics` dòng 25
+- def `_plot_training_history` dòng 70
+
+### `UI.py`
+- def `_now` dòng 83
+- def `_status_style` dòng 86
+- def `_cat_style` dòng 90
+- class `PixelCat` dòng 135
+- def `__init__` dòng 138
+- def `get_sprite` dòng 153
+- def `update_position` dòng 156
+- def `start` dòng 202
+- def `stop` dòng 209
+- def `_run` dòng 215
+- class `CatOverlay` dòng 220
+- def `__init__` dòng 223
+- def `enable` dòng 228
+- def `disable` dòng 232
+- def `toggle` dòng 236
+- def `get_status` dòng 242
+- def `init_cat` dòng 251
+- def `toggle_cat` dòng 257
+- def `get_cat_status` dòng 264
+- def `render_cat_demo` dòng 270
+- class `PixelCat` dòng 338
+- def `__init__` dòng 341
+- def `get_sprite` dòng 356
+- def `update_position` dòng 359
+- def `start` dòng 405
+- def `stop` dòng 412
+- def `_run` dòng 418
+- class `CatOverlay` dòng 423
+- def `__init__` dòng 426
+- def `enable` dòng 431
+- def `disable` dòng 435
+- def `toggle` dòng 439
+- def `get_status` dòng 445
+- def `init_cat` dòng 454
+- def `toggle_cat` dòng 460
+- def `get_cat_status` dòng 467
+- def `render_cat_demo` dòng 473
+- class `PixelCat` dòng 541
+- def `__init__` dòng 544
+- def `get_sprite` dòng 559
+- def `update_position` dòng 562
+- def `start` dòng 608
+- def `stop` dòng 615
+- def `_run` dòng 621
+- class `CatOverlay` dòng 626
+- def `__init__` dòng 629
+- def `enable` dòng 634
+- def `disable` dòng 638
+- def `toggle` dòng 642
+- def `get_status` dòng 648
+- def `init_cat` dòng 657
+- def `toggle_cat` dòng 663
+- def `get_cat_status` dòng 670
+- def `render_cat_demo` dòng 676
+- def `print_info` dòng 710
+- def `print_ok` dòng 713
+- def `print_warn` dòng 716
+- def `print_err` dòng 719
+- def `print_rule` dòng 722
+- def `render_main_menu` dòng 729
+- def `render_chatbot_help` dòng 743
+- def `render_agent_reply` dòng 785
+- def `render_chat_status_bar` dòng 865
+- def `_pipeline_table` dòng 893
+- def `build_dashboard` dòng 917
+- class `DashboardLive` dòng 969
+- def `__init__` dòng 972
+- def `__enter__` dòng 976
+- def `update` dòng 983
+- def `__exit__` dòng 988
+- def `render_project_result` dòng 993
+- def `render_project_error` dòng 1008
+- def `render_status` dòng 1019
+- def `render_memory_snapshot` dòng 1074
+- def `render_facts_table` dòng 1126
+- def `render_recall_results` dòng 1147
+- def `render_history` dòng 1159
+- def `render_exec_log` dòng 1182
+- def `render_task_detail` dòng 1204
+- def `render_logs` dòng 1234
+- def `render_dir_listing` dòng 1250
+- def `render_file_content` dòng 1268
+- def `render_project_header` dòng 1289
+- def `make_spinner` dòng 1312
+- def `render_dashboard` dòng 1326
+- def `render_memory_snapshot` dòng 1336
+- def `render_status` dòng 1388
+- def `render_chatbot_header` dòng 1437
+- def `build_chat_progress_panel` dòng 1467
+- class `ChatProgressLive` dòng 1505
+- def `__init__` dòng 1508
+- def `__enter__` dòng 1513
+- def `update` dòng 1521
+- def `__exit__` dòng 1529
+
+## 3. Liên kết import nội bộ giữa các file
+- `agent_core/cli_auto.py` import `cli` -> `cli.py`
+- `agent_diagnostics/agent_watchdog.py` import `agent_diagnostics.cli_need_next_action` -> `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/server_backup_before_fix.py` import `core.agent` -> `core/agent.py`
+- `agent_diagnostics/server_backup_final2.py` import `core.agent` -> `core/agent.py`
+- `agent_diagnostics/server_backup_import.py` import `core.agent` -> `core/agent.py`
+- `agent_diagnostics/server_backup_qa.py` import `core.agent` -> `core/agent.py`
+- `agent_diagnostics/verify_project_layout.py` import `agent_diagnostics.cli_need_next_action` -> `agent_diagnostics/cli_need_next_action.py`
+- `agent_tests/test_cli_auto.py` import `agent_core.cli_auto` -> `agent_core/cli_auto.py`
+- `cli.py` import `UI` -> `UI.py`
+- `core/agent.py` import `tools.model_improver` -> `tools/model_improver.py`
+- `core/agent.py` import `tools.visualizer` -> `tools/visualizer.py`
+- `core/agent.py` import `tools.bug_fixer` -> `tools/bug_fixer.py`
+- `core/agent.py` import `tools.code_gen` -> `tools/code_gen.py`
+- `core/agent.py` import `tools.evaluator` -> `tools/evaluator.py`
+- `core/agent.py` import `tools.test_runner` -> `tools/test_runner.py`
+- `core/agent.py` import `rag.store` -> `rag/store.py`
+- `core/agent_backup_import.py` import `tools.model_improver` -> `tools/model_improver.py`
+- `core/agent_backup_import.py` import `tools.visualizer` -> `tools/visualizer.py`
+- `core/agent_backup_import.py` import `tools.bug_fixer` -> `tools/bug_fixer.py`
+- `core/agent_backup_import.py` import `tools.code_gen` -> `tools/code_gen.py`
+- `core/agent_backup_import.py` import `tools.evaluator` -> `tools/evaluator.py`
+- `core/agent_backup_import.py` import `tools.test_runner` -> `tools/test_runner.py`
+- `core/agent_backup_import.py` import `rag.store` -> `rag/store.py`
+- `test_cli.py` import `UI` -> `UI.py`
+- `test_cli.py` import `server` -> `server.py`
+
+## 4. Liên kết lời gọi function/class có khả năng trỏ sang file khác
+- `agent_diagnostics/agent_done_certificate.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/agent_done_certificate.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/agent_done_certificate.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_server_manager.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_server_manager.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/agent_server_manager.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_server_manager.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `request_stop` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `_listen_windows` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `stop` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `start` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `_listen_unix` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_stop_signal.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `request_stop` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `_listen_windows` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `stop` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `start` -> ứng viên trong `UI.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `_listen_unix` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `analyze` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `infer_current_task` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/agent_watchdog.py` gọi `decide_next_action` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/chat_server.py` gọi `setup_logger` -> ứng viên trong `agent_diagnostics/logging_config.py`
+- `agent_diagnostics/chat_server.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/chat_server.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/chat_server.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/chat_server.py` gọi `start` -> ứng viên trong `UI.py`
+- `agent_diagnostics/chat_server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/chat_server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/chat_server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/cli_backup.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup.py` gọi `render_dashboard` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_backup.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_save` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup.py` gọi `_save` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/cli_backup.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup.py` gọi `print_err` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/cli_backup.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `print_info` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup.py` gọi `print_ok` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `print_warn` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/cli_backup.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/cli_backup.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/cli_backup.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `record_task` -> ứng viên trong `server.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `render_dashboard` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_save` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_save` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `print_err` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `print_info` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `print_ok` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_init_cli_log` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `print_warn` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_log_cli` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `record_task` -> ứng viên trong `server.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_encoding.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_load` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `render_dashboard` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_record_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_save` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_save` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `print_err` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_backup_file` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `print_info` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_save` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `print_ok` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_init_cli_log` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `print_warn` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_log_cli` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_status_colour` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_memory_record_error` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `record_task` -> ứng viên trong `server.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_run` -> ứng viên trong `UI.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_backup_qa.py` gọi `_sigint_handler` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/cli_need_next_action.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/cli_need_next_action.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/cli_need_next_action.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/cli_need_next_action.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/hello_world.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/hello_world.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/hello_world.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/logging_config.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/logging_config.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/logging_config.py` gọi `clear` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/migrate_memory.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/migrate_memory.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `agent_diagnostics/migrate_memory.py` gọi `execute` -> ứng viên trong `tools/python_executor.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_diagnostics/run_supervised_task.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `RAGAgent` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `RAGAgent` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `RAGAgent` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/server_backup_before_fix.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `RAGAgent` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `RAGAgent` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `RAGAgent` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/server_backup_final2.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/server_backup_import.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_import.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_import.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_import.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_import.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/server_backup_import.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_import.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_import.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_import.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `RAGAgent` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_import.py` gọi `RAGAgent` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_import.py` gọi `RAGAgent` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_import.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_import.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/server_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `update` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `websocket_endpoint` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `run_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RAGAgent` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RAGAgent` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RAGAgent` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_run_task_sync` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_get_agent` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/server_backup_qa.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `stop` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `stop` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `start` -> ứng viên trong `UI.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `recall_facts` -> ứng viên trong `server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `recall_facts` -> ứng viên trong `server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `LongTermMemory` -> ứng viên trong `server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `search_episodes` -> ứng viên trong `server.py`
+- `agent_diagnostics/server_memory_patch.py` gọi `store_episode` -> ứng viên trong `server.py`
+- `agent_diagnostics/test.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/test.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/test.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/test.py` gọi `history` -> ứng viên trong `server.py`
+- `agent_diagnostics/test.py` gọi `me` -> ứng viên trong `auth.py`
+- `agent_diagnostics/test.py` gọi `read_file` -> ứng viên trong `server.py`
+- `agent_diagnostics/test.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/test.py` gọi `RAGAgent` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/test.py` gọi `RAGAgent` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/test.py` gọi `execute_python` -> ứng viên trong `server.py`
+- `agent_diagnostics/test.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/test.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `agent_diagnostics/test.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `agent_diagnostics/test.py` gọi `list_dir` -> ứng viên trong `server.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `agent_diagnostics/verify_project_layout.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `agent_tests/test_cli_auto.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `agent_tests/test_cli_auto.py` gọi `me` -> ứng viên trong `auth.py`
+- `auth.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `auth.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `auth.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `auth.py` gọi `_api_key` -> ứng viên trong `cli.py`
+- `auth.py` gọi `_api_key` -> ứng viên trong `test_cli.py`
+- `auth.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `auth.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `auth.py` gọi `execute` -> ứng viên trong `tools/python_executor.py`
+- `cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `exec_log` -> ứng viên trong `server.py`
+- `cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `cli.py` gọi `render_dashboard` -> ứng viên trong `UI.py`
+- `cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_chatbot_repl` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_save_config` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_print_agent` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `cli.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `cli.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `cli.py` gọi `render_main_menu` -> ứng viên trong `UI.py`
+- `cli.py` gọi `history` -> ứng viên trong `server.py`
+- `cli.py` gọi `_display_facts` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `print_err` -> ứng viên trong `UI.py`
+- `cli.py` gọi `me` -> ứng viên trong `auth.py`
+- `cli.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `cli.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `cli.py` gọi `start` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `render_dir_listing` -> ứng viên trong `UI.py`
+- `cli.py` gọi `print_info` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `cli.py` gọi `render_memory_snapshot` -> ứng viên trong `UI.py`
+- `cli.py` gọi `render_memory_snapshot` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `render_history` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_tick_progress` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `update` -> ứng viên trong `UI.py`
+- `cli.py` gọi `update` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_api_key` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `render_task_detail` -> ứng viên trong `UI.py`
+- `cli.py` gọi `render_logs` -> ứng viên trong `UI.py`
+- `cli.py` gọi `render_status` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `render_status` -> ứng viên trong `UI.py`
+- `cli.py` gọi `memory_snapshot` -> ứng viên trong `server.py`
+- `cli.py` gọi `print_ok` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_sigint` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_project_repl` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_maybe_auth` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_http_post_raw` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `tail` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `print_warn` -> ứng viên trong `UI.py`
+- `cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_sc` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `render_chatbot_help` -> ứng viên trong `UI.py`
+- `cli.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `cli.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_ensure_auth` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `render_file_content` -> ứng viên trong `UI.py`
+- `cli.py` gọi `render_exec_log` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_auth_headers` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `cli.py` gọi `render_chatbot_header` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_display_memory_snapshot` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `print_rule` -> ứng viên trong `UI.py`
+- `cli.py` gọi `ChatProgressLive` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `cli.py` gọi `_main_menu` -> ứng viên trong `test_cli.py`
+- `cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `cli.py` gọi `render_agent_reply` -> ứng viên trong `UI.py`
+- `core/agent.py` gọi `query` -> ứng viên trong `rag/store.py`
+- `core/agent.py` gọi `Visualizer` -> ứng viên trong `tools/visualizer.py`
+- `core/agent.py` gọi `improve` -> ứng viên trong `tools/model_improver.py`
+- `core/agent.py` gọi `Evaluator` -> ứng viên trong `tools/evaluator.py`
+- `core/agent.py` gọi `_save` -> ứng viên trong `core/agent_backup_import.py`
+- `core/agent.py` gọi `ModelImprover` -> ứng viên trong `tools/model_improver.py`
+- `core/agent.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `core/agent.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `core/agent.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `core/agent.py` gọi `me` -> ứng viên trong `auth.py`
+- `core/agent.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `core/agent.py` gọi `TestRunner` -> ứng viên trong `tools/test_runner.py`
+- `core/agent.py` gọi `evaluate` -> ứng viên trong `server.py`
+- `core/agent.py` gọi `evaluate` -> ứng viên trong `tools/evaluator.py`
+- `core/agent.py` gọi `BugFixer` -> ứng viên trong `tools/bug_fixer.py`
+- `core/agent.py` gọi `_create_project_dir` -> ứng viên trong `core/agent_backup_import.py`
+- `core/agent.py` gọi `CodeGenerator` -> ứng viên trong `tools/code_gen.py`
+- `core/agent.py` gọi `plot_metrics` -> ứng viên trong `tools/visualizer.py`
+- `core/agent.py` gọi `_project_dir` -> ứng viên trong `server.py`
+- `core/agent.py` gọi `generate` -> ứng viên trong `tools/code_gen.py`
+- `core/agent.py` gọi `_save_json` -> ứng viên trong `core/agent_backup_import.py`
+- `core/agent.py` gọi `_save_json` -> ứng viên trong `memory/memory_manager.py`
+- `core/agent.py` gọi `add` -> ứng viên trong `rag/store.py`
+- `core/agent.py` gọi `RAGStore` -> ứng viên trong `rag/store.py`
+- `core/agent.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `core/agent.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `core/agent.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `core/agent.py` gọi `_make_client` -> ứng viên trong `core/agent_backup_import.py`
+- `core/agent.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `core/agent.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `core/agent.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `core/agent_backup_import.py` gọi `query` -> ứng viên trong `rag/store.py`
+- `core/agent_backup_import.py` gọi `Visualizer` -> ứng viên trong `tools/visualizer.py`
+- `core/agent_backup_import.py` gọi `improve` -> ứng viên trong `tools/model_improver.py`
+- `core/agent_backup_import.py` gọi `Evaluator` -> ứng viên trong `tools/evaluator.py`
+- `core/agent_backup_import.py` gọi `_save` -> ứng viên trong `core/agent.py`
+- `core/agent_backup_import.py` gọi `ModelImprover` -> ứng viên trong `tools/model_improver.py`
+- `core/agent_backup_import.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `core/agent_backup_import.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `core/agent_backup_import.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `core/agent_backup_import.py` gọi `me` -> ứng viên trong `auth.py`
+- `core/agent_backup_import.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `core/agent_backup_import.py` gọi `TestRunner` -> ứng viên trong `tools/test_runner.py`
+- `core/agent_backup_import.py` gọi `evaluate` -> ứng viên trong `server.py`
+- `core/agent_backup_import.py` gọi `evaluate` -> ứng viên trong `tools/evaluator.py`
+- `core/agent_backup_import.py` gọi `BugFixer` -> ứng viên trong `tools/bug_fixer.py`
+- `core/agent_backup_import.py` gọi `_create_project_dir` -> ứng viên trong `core/agent.py`
+- `core/agent_backup_import.py` gọi `CodeGenerator` -> ứng viên trong `tools/code_gen.py`
+- `core/agent_backup_import.py` gọi `plot_metrics` -> ứng viên trong `tools/visualizer.py`
+- `core/agent_backup_import.py` gọi `_project_dir` -> ứng viên trong `server.py`
+- `core/agent_backup_import.py` gọi `generate` -> ứng viên trong `tools/code_gen.py`
+- `core/agent_backup_import.py` gọi `_save_json` -> ứng viên trong `core/agent.py`
+- `core/agent_backup_import.py` gọi `_save_json` -> ứng viên trong `memory/memory_manager.py`
+- `core/agent_backup_import.py` gọi `add` -> ứng viên trong `rag/store.py`
+- `core/agent_backup_import.py` gọi `RAGStore` -> ứng viên trong `rag/store.py`
+- `core/agent_backup_import.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `core/agent_backup_import.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `core/agent_backup_import.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `core/agent_backup_import.py` gọi `_make_client` -> ứng viên trong `core/agent.py`
+- `core/agent_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `core/agent_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `core/agent_backup_import.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `memory/memory_manager.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `memory/memory_manager.py` gọi `_save_json` -> ứng viên trong `core/agent.py`
+- `memory/memory_manager.py` gọi `_save_json` -> ứng viên trong `core/agent_backup_import.py`
+- `memory/memory_manager.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `memory/memory_manager.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `memory/memory_manager.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `rag/store.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `rag/store.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `rag/store.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `run_and_dump_pytest.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `run_and_dump_pytest.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `run_and_dump_pytest.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `server.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `server.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `health` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `fix` -> ứng viên trong `tools/bug_fixer.py`
+- `server.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `server.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `server.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `server.py` gọi `me` -> ứng viên trong `auth.py`
+- `server.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `server.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `server.py` gọi `start` -> ứng viên trong `UI.py`
+- `server.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `server.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `server.py` gọi `_now_iso` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `server.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `server.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `server.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `server.py` gọi `safe_write` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `server.py` gọi `update` -> ứng viên trong `UI.py`
+- `server.py` gọi `update` -> ứng viên trong `UI.py`
+- `server.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `get_logs` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `evaluate` -> ứng viên trong `tools/evaluator.py`
+- `server.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `lifespan` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `_strip_fences` -> ứng viên trong `tools/bug_fixer.py`
+- `server.py` gọi `_strip_fences` -> ứng viên trong `tools/code_gen.py`
+- `server.py` gọi `clear` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `server.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `RunRequest` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `get_task` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `server.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `server.py` gọi `safe_delete` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `server.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `server.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `server.py` gọi `execute_python` -> ứng viên trong `agent_diagnostics/test.py`
+- `server.py` gọi `execute` -> ứng viên trong `tools/python_executor.py`
+- `server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `server.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `server.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `server.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `server.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `server.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `server.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `server.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_http_get` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `exec_log` -> ứng viên trong `server.py`
+- `test_cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_print_header` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `test_cli.py` gọi `render_dashboard` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `test_cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_chatbot_repl` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `cmd_memory` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_print_info` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_save_config` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_print_agent` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `test_cli.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `test_cli.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `test_cli.py` gọi `render_main_menu` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `history` -> ứng viên trong `server.py`
+- `test_cli.py` gọi `_display_facts` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `print_err` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `me` -> ứng viên trong `auth.py`
+- `test_cli.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `test_cli.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `test_cli.py` gọi `start` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_render_dashboard` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `render_dir_listing` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `print_info` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_infer_phase` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `read_text` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `test_cli.py` gọi `render_memory_snapshot` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `render_memory_snapshot` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_http_post` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `render_history` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_repl` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_tick_progress` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_api_key` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `render_task_detail` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `render_logs` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `render_status` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `render_status` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `memory_snapshot` -> ứng viên trong `server.py`
+- `test_cli.py` gọi `print_ok` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_sigint` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_project_repl` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_maybe_auth` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_print_err` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `cmd_task` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_http_post_raw` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `cmd_run` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `tail` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `test_cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `cmd_logs` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `print_warn` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `cmd_status` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_progress_bar` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_sc` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `render_chatbot_help` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `test_cli.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `test_cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_now_str` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_wait_for_server` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_ensure_auth` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `render_file_content` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `render_exec_log` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_auth_headers` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_base_url` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `test_cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `test_cli.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `test_cli.py` gọi `render_chatbot_header` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_load_config` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_display_memory_snapshot` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_print_ok` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `print_rule` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `test_cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `test_cli.py` gọi `_print_warn` -> ứng viên trong `agent_diagnostics/cli_backup_qa.py`
+- `test_cli.py` gọi `_main_menu` -> ứng viên trong `cli.py`
+- `test_cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `_run` -> ứng viên trong `UI.py`
+- `test_cli.py` gọi `render_agent_reply` -> ứng viên trong `UI.py`
+- `tools/bug_fixer.py` gọi `_strip_fences` -> ứng viên trong `server.py`
+- `tools/bug_fixer.py` gọi `_strip_fences` -> ứng viên trong `tools/code_gen.py`
+- `tools/bug_fixer.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/bug_fixer.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `tools/bug_fixer.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `tools/code_gen.py` gọi `_strip_fences` -> ứng viên trong `server.py`
+- `tools/code_gen.py` gọi `_strip_fences` -> ứng viên trong `tools/bug_fixer.py`
+- `tools/code_gen.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/code_gen.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `tools/code_gen.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `tools/evaluator.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/evaluator.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/evaluator.py` gọi `evaluate` -> ứng viên trong `server.py`
+- `tools/model_improver.py` gọi `_strip_fences` -> ứng viên trong `server.py`
+- `tools/model_improver.py` gọi `_strip_fences` -> ứng viên trong `tools/bug_fixer.py`
+- `tools/model_improver.py` gọi `_strip_fences` -> ứng viên trong `tools/code_gen.py`
+- `tools/model_improver.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/model_improver.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `tools/model_improver.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `tools/python_executor.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `tools/python_executor.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `tools/python_executor.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `tools/python_executor.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/python_executor.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `tools/python_executor.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `tools/test_runner.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/test_runner.py` gọi `main` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `tools/test_runner.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup.py`
+- `tools/test_runner.py` gọi `main` -> ứng viên trong `agent_diagnostics/cli_backup_encoding.py`
+- `tools/test_runner.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `tools/test_runner.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `tools/test_runner.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `tools/test_runner.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/visualizer.py` gọi `exists` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `tools/visualizer.py` gọi `history` -> ứng viên trong `server.py`
+- `tools/visualizer.py` gọi `load` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `UI.py` gọi `exec_log` -> ứng viên trong `server.py`
+- `UI.py` gọi `run` -> ứng viên trong `agent_diagnostics/test.py`
+- `UI.py` gọi `run` -> ứng viên trong `core/agent.py`
+- `UI.py` gọi `run` -> ứng viên trong `core/agent_backup_import.py`
+- `UI.py` gọi `stop` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `UI.py` gọi `history` -> ứng viên trong `server.py`
+- `UI.py` gọi `me` -> ứng viên trong `auth.py`
+- `UI.py` gọi `start` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `UI.py` gọi `start` -> ứng viên trong `agent_diagnostics/chat_server.py`
+- `UI.py` gọi `render_status` -> ứng viên trong `cli.py`
+- `UI.py` gọi `render_status` -> ứng viên trong `test_cli.py`
+- `UI.py` gọi `memory_snapshot` -> ứng viên trong `server.py`
+- `UI.py` gọi `tail` -> ứng viên trong `agent_diagnostics/cli_need_next_action.py`
+- `UI.py` gọi `clear` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `UI.py` gọi `log` -> ứng viên trong `agent_diagnostics/agent_watchdog.py`
+- `UI.py` gọi `log` -> ứng viên trong `agent_diagnostics/run_supervised_task.py`
+- `UI.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_done_certificate.py`
+- `UI.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_server_manager.py`
+- `UI.py` gọi `__init__` -> ứng viên trong `agent_diagnostics/agent_stop_signal.py`
+- `UI.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_before_fix.py`
+- `UI.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_final2.py`
+- `UI.py` gọi `status` -> ứng viên trong `agent_diagnostics/server_backup_import.py`
+- `UI.py` gọi `_main_menu` -> ứng viên trong `cli.py`
+- `UI.py` gọi `_main_menu` -> ứng viên trong `test_cli.py`
+
+## 5. Ghi chú
+- Báo cáo này dùng phân tích tĩnh đơn giản để rà soát nhanh liên kết function/class giữa các file.

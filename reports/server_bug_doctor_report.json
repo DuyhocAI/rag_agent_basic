@@ -1,0 +1,53 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "bug_file": "C:\\Bao_Duy\\rag_agent\\bug.txt",
+  "diagnosis": {
+    "has_traceback": false,
+    "has_module_not_found": false,
+    "has_import_error": false,
+    "has_syntax_error": true,
+    "has_indentation_error": false,
+    "has_file_not_found": false,
+    "has_permission_error": false,
+    "has_port_in_use": false,
+    "has_uvicorn": false,
+    "missing_modules": [],
+    "missing_module_details": []
+  },
+  "bootstrap_result": {
+    "ok": true,
+    "changed": false,
+    "reason": "Bootstrap đã tồn tại"
+  },
+  "patched_files": [
+    {
+      "file": "agent_runtime_script.py",
+      "changed": true,
+      "backup": "C:\\Bao_Duy\\rag_agent\\backup\\server_bug_doctor\\agent_runtime_script.py.20260430_212123.bak"
+    },
+    {
+      "file": "agent_diagnostics\\agent_runtime_script.py",
+      "changed": true,
+      "backup": "C:\\Bao_Duy\\rag_agent\\backup\\server_bug_doctor\\agent_runtime_script.py.20260430_212123.bak"
+    }
+  ],
+  "server_compile": {
+    "ok": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n"
+  },
+  "all_compile_failed": {
+    "cli.py": "  File \"C:\\Bao_Duy\\rag_agent\\cli.py\", line 43\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "server.py": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 40\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup.py\", line 33\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_encoding.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_encoding.py\", line 14\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\cli_backup_qa.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\cli_backup_qa.py\", line 15\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n",
+    "agent_diagnostics\\server_backup_before_fix.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_before_fix.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n",
+    "agent_diagnostics\\server_backup_final2.py": "  File \"C:\\Bao_Duy\\rag_agent\\agent_diagnostics\\server_backup_final2.py\", line 97\n    from core.qa_agent import QuestionAnsweringAgent\nSyntaxError: expected 'except' or 'finally' block\n"
+  },
+  "recommendations": [
+    "Có SyntaxError. Cần sửa file/dòng traceback chỉ ra."
+  ],
+  "ok": false
+}

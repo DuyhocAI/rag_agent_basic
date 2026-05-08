@@ -1,0 +1,26 @@
+{
+  "project_root": "C:\\Bao_Duy\\rag_agent",
+  "bug_file_exists": true,
+  "missing_modules_from_bug": [],
+  "pip_install_results": [],
+  "patch_result": {
+    "ok": true,
+    "changed": true,
+    "backup": "C:\\Bao_Duy\\rag_agent\\backup\\server_emergency_fix\\server.py.20260430_212414.bak"
+  },
+  "compile_result": {
+    "ok": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 41\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file\n"
+  },
+  "smoke_result": {
+    "ok": false,
+    "returncode": 1,
+    "reason": "server.py thoát trước timeout",
+    "stdout_tail": "",
+    "stderr_tail": "  File \"C:\\Bao_Duy\\rag_agent\\server.py\", line 41\n    from __future__ import annotations\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSyntaxError: from __future__ imports must occur at the beginning of the file"
+  },
+  "bug_after_fix": "C:\\Bao_Duy\\rag_agent\\bug_after_fix.txt",
+  "ok": false
+}
