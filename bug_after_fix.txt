@@ -1,7 +1,0 @@
-(rag_agent) C:\Bao_Duy\rag_agent>python server.py
-  File "C:\Bao_Duy\rag_agent\server.py", line 41
-    from __future__ import annotations
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: from __future__ imports must occur at the beginning of the file
-
-(rag_agent) C:\Bao_Duy\rag_agent>
