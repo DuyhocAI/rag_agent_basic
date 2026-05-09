@@ -16,7 +16,7 @@ import traceback
 
 # Cau hinh ket noi API
 URL = 'https://ckey.vn/v1/chat/completions'
-API_KEY = 'sk-93bfdf1cb100ed0379a5d5724f83af7621462aafd9037c7a318c01a180e2f860'
+API_KEY = 'API Key for cross test'
 MEMORY_FILE = 'agent_memory.json'
 
 # Gioi han token de tranh bung no lich su
